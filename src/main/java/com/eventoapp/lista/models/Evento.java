@@ -1,11 +1,33 @@
 package com.eventoapp.lista.models;
 
-public class Evento {
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
+import java.io.Serializable;
+import java.util.UUID;
+
+@Entity
+public class Evento implements Serializable {
+
+    private static final long serialVersionUID= 1L;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private UUID id;
     private String nome;
     private String local;
     private String data;
     private String horaio;
+
+    public UUID getId() {
+        return id;
+    }
+
+    public void setId(UUID id) {
+        this.id = id;
+    }
 
     public String getNome() {
         return nome;
