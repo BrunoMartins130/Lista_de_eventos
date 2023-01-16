@@ -19,7 +19,7 @@ public class Evento implements Serializable {
     private String nome;
     private String local;
     private String data;
-    private String horaio;
+    private String horario;
 
     public UUID getId() {
         return id;
@@ -53,11 +53,11 @@ public class Evento implements Serializable {
         this.data = data;
     }
 
-    public String getHoraio() {
-        return horaio;
+    public String getHorario() {
+        return horario;
     }
 
-    public void setHoraio(String horaio) {
-        this.horaio = horaio;
+    public void setHorario(String horario) {
+        this.horario = horario;
     }
 }
